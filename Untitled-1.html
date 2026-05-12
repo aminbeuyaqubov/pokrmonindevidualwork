@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Room Furniture</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'League Spartan', sans-serif;
+    overflow-x:hidden;
+    background:white;
+}
+
+/*NAVS*/
+
+header{
+    position:absolute;
+    top:40px;
+    left:60px;
+    z-index:100;
+    display:flex;
+    align-items:center;
+    gap:70px;
+}
+
+.logo{
+    color:white;
+    font-size:2rem;
+    font-weight:700;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:1rem;
+    font-weight:500;
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    width:0%;
+    height:2px;
+    background:white;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/*HERO*/
+
+.hero{
+    display:grid;
+    grid-template-columns:60% 40%;
+    min-height:70vh;
+}
+
+/*LEFTIMAGE*/
+
+.hero-left{
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-left img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/*TEXT*/
+
+.hero-right{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    padding:80px;
+}
+
+.hero-right h1{
+    font-size:4rem;
+    line-height:1;
+    margin-bottom:30px;
+    color:black;
+}
+
+.hero-right p{
+    color:#8d8d8d;
+    line-height:1.8;
+    font-size:1rem;
+    margin-bottom:35px;
+}
+
+.shop-btn{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    letter-spacing:12px;
+    text-decoration:none;
+    color:black;
+    font-weight:600;
+    transition:0.3s;
+    width:max-content;
+}
+
+.shop-btn:hover{
+    opacity:0.6;
+}
+
+/*SLIDER BUTTONS*/
+
+.slider-buttons{
+    position:absolute;
+    bottom:0;
+    left:0;
+    display:flex;
+}
+
+.slider-buttons button{
+    width:80px;
+    height:80px;
+    border:none;
+    background:black;
+    color:white;
+    font-size:2rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.slider-buttons button:hover{
+    background:#444;
+}
+
+/*ABOUT SECTION */
+
+.about{
+    display:grid;
+    grid-template-columns:30% 40% 30%;
+    min-height:30vh;
+}
+
+.about img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.about-text{
+    padding:70px;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.about-text h2{
+    letter-spacing:8px;
+    font-size:1rem;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:#8d8d8d;
+    line-height:1.8;
+}
+
+/*RESPONsIVE*/
+
+@media(max-width:1000px){
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .hero-left{
+        height:60vh;
+    }
+
+    .hero-right{
+        padding:50px 35px;
+    }
+
+    .hero-right h1{
+        font-size:2.7rem;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .about-text{
+        padding:50px 35px;
+    }
+
+    header{
+        left:30px;
+        top:30px;
+        gap:35px;
+    }
+
+    nav{
+        gap:20px;
+    }
+}
+
+@media(max-width:600px){
+
+    header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .hero-right h1{
+        font-size:2.2rem;
+    }
+
+    .slider-buttons button{
+        width:65px;
+        height:65px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+    <div class="logo">room</div>
+
+    <nav>
+        <a href="file:///C:/Users/HUAWEI/Untitled-1.html">home</a>
+        <a href="https://www.pokemon.com/us/pokedex">pokemons</a>
+        <a href="http://github.com/">github</a>
+        <a href="C:/Users/HUAWEI/source.html">source</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-left">
+        <img id="heroImage" src="48f1bbd70dfe71172f8812f7d57ba8bf-1.jpg" alt="">
+    </div>
+
+    <div class="hero-right">
+
+        <h1 id="heroTitle">
+            Why should you decorate your room in pokemon style
+        </h1>
+
+        <p id="heroText">
+            in today's world minimalism took over the wolrd and everybody is grown...expect me,I think you should have your room with your childhood interest and make it like you wanted inyour childhood as now you can becouse it will heal a wound insaid you that you didn't even know abouyt but it always hurts(I kinda got too poetic here).
+        </p>
+
+        <a href="https://edu.google.com/workspace-for-education/products/classroom/" class="shop-btn">
+            Rate Now →
+        </a>
+
+        <div class="slider-buttons">
+            <button onclick="prevSlide()">❮</button>
+            <button onclick="nextSlide()">❯</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about">
+
+    <img src="snorlax.webp" alt="">
+
+    <div class="about-text">
+
+        <h2>HOW CAN I GAIN THIS TYPE OF ROOM?</h2>
+
+        <p>
+            If I gain 10 points,it means in future I will become big rich man and can provide myself a pokemon room  as I will have money,and it will make so hapyy.
+        </p>
+
+    </div>
+
+    <img src="poke.webp" alt="">
+
+</section>
+
+<script>
+/*it took me 2 hours to learn this,I feel traumatized*/
+const slides = [
+
+{
+    image:"48f1bbd70dfe71172f8812f7d57ba8bf-1.jpg",
+    title:"Why should you decorate your room in pokemon style",
+    text:" in today's world minimalism took over the wolrd and everybody is grown...expect me,I think you should have your room with your childhood interest and make it like you wanted inyour childhood as now you can becouse it will heal a wound insaid you that you didn't even know abouyt but it always hurts(I kinda got too poetic here)."
+},
+
+{
+    image:"d7169051d098b384631eec749013bff9.jpg",
+    title:"You can have your dream room",
+    text:"one day you will be rich and will have that room you always wanted,my prays are with you, it is 2x more if I get 10 points by the way."
+},
+
+{
+    image:"cat.jpg",
+    title:"for example,if you like cats you will get cat room",
+    text:"you can get a room with cats or cat pokemons like this one and you will...I mean I hope so ."
+}
+
+];
+
+let current = 0;
+
+const heroImage = document.getElementById("heroImage");
+const heroTitle = document.getElementById("heroTitle");
+const heroText = document.getElementById("heroText");
+
+function updateSlide(){
+
+    heroImage.src = slides[current].image;
+    heroTitle.innerText = slides[current].title;
+    heroText.innerText = slides[current].text;
+
+}
+
+function nextSlide(){
+
+    current++;
+
+    if(current >= slides.length){
+        current = 0;
+    }
+
+    updateSlide();
+
+}
+
+function prevSlide(){
+
+    current--;
+
+    if(current < 0){
+        current = slides.length - 1;
+    }
+
+    updateSlide();
+
+}
+
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sources</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#f5f5f5;
+    padding:60px;
+    color:#111;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+}
+
+h1{
+    margin-bottom:30px;
+}
+
+.section{
+    margin-bottom:40px;
+}
+
+h2{
+    margin-bottom:15px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+a{
+    color:black;
+}
+
+</style>
+
+</head>
+<body>
+
+
+
+</body>
+</html>
